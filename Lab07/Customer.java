@@ -1,29 +1,29 @@
 package com.mycompany.lab07_01;
 
 public class Customer {
-    private String fristName;
+    private String firstName;
     private String lastName;
     private CheckingAccount acct;
     
     public Customer(){this("","",null);}
         
-    public Customer(String fristName, String lastName){
-        this(fristName,lastName,null);
+    public Customer(String firstName, String lastName){
+        this(firstName,lastName,null);
     }
     
-    public Customer(String fristName, String lastName, CheckingAccount acct){
-        this.fristName = fristName;
+    public Customer(String firstName, String lastName, CheckingAccount acct){
+        this.firstName = firstName;
         this.lastName = lastName;
         this.acct = acct;
 
     }
 
-    public String getFristName() {
-        return fristName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFristName(String fristName) {
-        this.fristName = fristName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -45,13 +45,13 @@ public class Customer {
     @Override
     public String toString(){
         if (this.acct == null){
-            return this.fristName +" "+ this.lastName + " doesn't have account.";
+            return this.firstName +" "+ this.lastName + " doesn’t have account.";
         }else{
-            return "The " + this.fristName + " account has " + this.acct.getBalance() + " bath and " + this.acct.getCredit()+ " credits.";
+            return "The " + this.firstName + " account has " + this.acct.getBalance() + " baht and " + this.acct.getCredit()+ " credits.";
         }
     }
     
     public boolean equals(Customer c){
-        return this.fristName.equals(c.fristName) && this.lastName.equals(c.lastName);
+        return this.firstName.equals(c.firstName) && this.lastName.equals(c.lastName);
     }
 }

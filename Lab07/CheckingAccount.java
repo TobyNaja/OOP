@@ -60,6 +60,6 @@ public class CheckingAccount extends Account{
     
     @Override
     public String toString(){
-        return "The "+ this.getName() + " account has " + this.getBalance() + " bath and " + this.credit + "credits.";
+        return "The "+ this.getName() + " account has " + this.getBalance() + " baht and " + this.credit + " credits.";
     }
 }
